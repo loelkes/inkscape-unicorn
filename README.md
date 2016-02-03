@@ -1,20 +1,21 @@
-MakerBot Unicorn G-Code Output for Inkscape
+SphereBot G-Code Output for Inkscape
 ===========================================
 
 This is an Inkscape extension that allows you to save your Inkscape drawings as
-G-Code files suitable for plotting with the [MakerBot Unicorn Pen Plotter](http://store.makerbot.com/makerbot-unicorn-pen-plotter-kit.html).
+G-Code files suitable for plotting with the [SphereBot](http://pleasantsoftware.com/developer/3d/spherebot/).
 
-Author: [Marty McGuire](http://github.com/martymcguire)
+It is based on the [MakerBot Unicorn G-Code](https://github.com/martymcguire/inkscape-unicorn) from [Marty McGuire](http://github.com/martymcguire).
 
-Website: [http://github.com/martymcguire/inkscape-unicorn](http://github.com/martymcguire/inkscape-unicorn)
+**This is under developpment and not working yet**
 
 Credits
 =======
 
-* Marty McGuire pulled this all together into an Inkscape extension.
+* [Marty McGuire](http://github.com/martymcguire) pulled this all together into an Inkscape extension.
 * [Inkscape](http://www.inkscape.org/) is an awesome open source vector graphics app.
 * [Scribbles](https://github.com/makerbot/Makerbot/tree/master/Unicorn/Scribbles%20Scripts) is the original DXF-to-Unicorn Python script.
 * [The Egg-Bot Driver for Inkscape](http://code.google.com/p/eggbotcode/) provided inspiration and good examples for working with Inkscape's extensions API.
+* [Christian Lölkes](https://github.com/loelkes) adapted this for the SphereBot with a Marlin firmware.
 
 Install
 =======
@@ -31,9 +32,10 @@ Usage
 =====
 
 * Size and locate your image appropriately:
-	* The CupCake CNC build platform size is 100mm x 100mm.
-	* Setting units to **mm** in Inkscape makes it easy to size your drawing.
+	* The SphereBot draw size is 3200 x 800 pixel.
+	* Setting units to **pixel** in Inkscape makes it easy to size your drawing.
 	* The extension will automatically attempt to center everything.
+	* 3200 pixel is the complete sphere, 800 pixel 1/4 of it.
 * Convert all text to paths:
 	* Select all text objects.
 	* Choose **Path | Object to Path**.
@@ -45,10 +47,7 @@ Usage
 	* For OS X, [Pleasant3D](http://www.pleasantsoftware.com/developer/pleasant3d/index.shtml) is great for this.
 	* For other operating systems... I don't know!
 * Print!
-	* Open your `.gcode` file in [ReplicatorG](http://replicat.org/)
-	* Set up your Unicorn and pen.
-	* Center your build platform.
-	* Click the **Build** button!
+	* Use your normal 3D printing software together with the SphereBot.
 
 TODOs
 =====
