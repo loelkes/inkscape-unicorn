@@ -162,7 +162,7 @@ class SvgEllipse(SvgPath):
     newpath = self.new_path_from_node(node)
     newpath.set('d',d)
     return newpath
-  
+
 class SvgCircle(SvgEllipse):
   def load(self, node,mat):
     rx = float(node.get('r','0'))
@@ -227,12 +227,12 @@ class SvgParser:
 
   def parse(self):
     # 0.28222 scale determined by comparing pixels-per-mm in a default Inkscape file.
-    self.svgWidth = self.getLength('width', 354) * 0.28222
-    self.svgHeight = self.getLength('height', 354) * 0.28222
-    self.recursivelyTraverseSvg(self.svg, [[0.28222, 0.0, -(self.svgWidth/2.0)], [0.0, -0.28222, (self.svgHeight/2.0)]])
+    self.svgWidth = self.getLength('width', 3200) * 1
+    self.svgHeight = self.getLength('height', 800) * 1
+    self.recursivelyTraverseSvg(self.svg, [[1, 0.0, -(self.svgWidth/2.0)], [0.0, -1, (self.svgHeight/2.0)]])
 
   # TODO: center this thing
-  def recursivelyTraverseSvg(self, nodeList, 
+  def recursivelyTraverseSvg(self, nodeList,
                              matCurrent = [[1.0, 0.0, 0.0], [0.0, -1.0, 0.0]],
                              parent_visibility = 'visible'):
     """
