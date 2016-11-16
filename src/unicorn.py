@@ -28,11 +28,11 @@ class MyEffect(inkex.Effect):
     inkex.Effect.__init__(self)
     self.OptionParser.add_option("--pen-up-angle",
                       action="store", type="float",
-                      dest="pen_up_angle", default="50.0",
+                      dest="pen_up_angle", default="30.0",
                       help="Pen Up Angle")
     self.OptionParser.add_option("--pen-down-angle",
                       action="store", type="float",
-                      dest="pen_down_angle", default="30.0",
+                      dest="pen_down_angle", default="50.0",
                       help="Pen Down Angle")
     self.OptionParser.add_option("--start-delay",
                       action="store", type="float",
@@ -44,8 +44,8 @@ class MyEffect(inkex.Effect):
                       help="Delay after pen up command before movement in milliseconds")
     self.OptionParser.add_option("--xy-feedrate",
                       action="store", type="float",
-                      dest="xy_feedrate", default="3500.0",
-                      help="XY axes feedrate in mm/min")
+                      dest="xy_feedrate", default="5000.0",
+                      help="XY axes feedrate in steps/s")
     self.OptionParser.add_option("--z-feedrate",
                       action="store", type="float",
                       dest="z_feedrate", default="150.0",
