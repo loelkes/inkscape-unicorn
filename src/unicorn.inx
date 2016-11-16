@@ -11,10 +11,7 @@
       <param name="pen-down-angle" type="float" min="0.0" max="180.0" _gui-text="Pen Down Angle">30</param>
       <param name="start-delay" type="float" min="0.0" max="1000.0" _gui-text="Delay after pen-down command before movement in milliseconds.">150.0</param>
       <param name="stop-delay" type="float" min="0.0" max="1000.0" _gui-text="Delay after pen-up command before movement in milliseconds.">150.0</param>
-      <param name="xy-feedrate" type="float" min="100.0" max="100.0" _gui-text="XY axes feedrate in mm/s.">20.0</param>
-      <param name="z-feedrate" type="float" min="0.0" max="100.0" _gui-text="Z-axis feedrate in mm/s.">20.0</param>
-      <param name="z-height" type="float" min="0.0" max="110.0" _gui-text="Z-axis print height in mm.">0.0</param>
-      <param name="finished-height" type="float" min="0.0" max="110.0" _gui-text="Z-axis height after printing in mm.">0.0</param>
+      <param name="xy-feedrate" type="float" min="100.0" max="5000.0" _gui-text="XY axes feedrate in steps/s.">3000.0</param>
     </page>
     <page name="pen_reg" _gui-text="Registration">
       <_param name="reg_help" type="description" xml:space="preserve">Pen Registration Check
